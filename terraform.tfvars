@@ -1,0 +1,10 @@
+prefix = "healthmed"
+db_name = "healthmed"
+db_engine = "postgres"
+db_engine_version = "16.1"
+db_user = "healthmed"
+db_password = ""
+
+mongodbatlas_public_key = ""
+mongodbatlas_private_key = ""
+atlas_org_id = ""
