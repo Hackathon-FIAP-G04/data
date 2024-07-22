@@ -3,19 +3,25 @@ resource "mongodbatlas_project" "atlas-project" {
   name = var.atlas_project_name
 }
 
-resource "mongodbatlas_database_user" "db-user" {
-  username = var.db_user
+resource "mongodbatlas_database_user" "db-user-doctors" {
+  username = var.db_user_doctors
   password = var.db_password
   project_id = mongodbatlas_project.atlas-project.id
   auth_database_name = "admin"
   roles {
     role_name     = "readWrite"
-    database_name = "${var.atlas_project_name}-menu"
+    database_name = "${var.db_name_doctors}"
   }
+}
 
+resource "mongodbatlas_database_user" "db-user-appointments" {
+  username = var.db_user_appointments
+  password = var.db_password
+  project_id = mongodbatlas_project.atlas-project.id
+  auth_database_name = "admin"
   roles {
     role_name     = "readWrite"
-    database_name = "${var.atlas_project_name}-payments"
+    database_name = "${var.db_name_appointments}"
   }
 }
 

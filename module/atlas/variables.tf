@@ -41,3 +41,9 @@ variable "mongodb_version" {
 
 variable "cidr_block" {}
 variable "db_password" {}
+
+variable "db_user_doctors" {}
+variable "db_name_doctors" {}
+
+variable "db_user_appointments" {}
+variable "db_name_appointments" {}

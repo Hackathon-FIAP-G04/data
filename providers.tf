@@ -8,7 +8,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "iburguer-bucket-rds"
+    bucket = "healthmed-atlas-bucket"
     key = "terraform.tfstate"
     region = "us-east-1"
   }
